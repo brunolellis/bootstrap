@@ -31,5 +31,14 @@
         <label>Or use custom triggers, like focus: </label>
         <input type="text" value="Click me!" tooltip="See? Now click away..."  tooltip-trigger="focus" tooltip-placement="right" class="form-control" />
       </div>
+      
+      <div class="form-group" ng-class="{'has-error' : age < 18}">
+        <label>Age: (18+)</label>
+        <input type="text" name="expr" ng-model="age" class="form-control"
+          tooltip="Must be 18 years of age or older to ..."
+          tooltip-placement="top"
+          tooltip-trigger="mouseenter"
+          tooltip-enable="age < 18" />
+      </div>
     </form>
 </div>
